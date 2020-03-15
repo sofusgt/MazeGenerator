@@ -8,7 +8,6 @@ namespace MazeGenerator {
         private bool visited;
         private int value;
         private List<Vertex> connections;
-        private bool inPath;
         private static int staticID = 0;
         private int id;
         private Position position;
@@ -34,20 +33,19 @@ namespace MazeGenerator {
                 return position;
             }
         }
+        public bool IsVisited {
+            get {
+                return visited;
+            }
+        }
 
 
         public Vertex (int x, int y) {
             connections = new List<Vertex>();
             visited = false;
-            inPath = false;
             staticID++;
             id = staticID;
             position = new Position(x, y);
-        }
-
-
-        public bool IsVisited() {
-            return visited;
         }
 
 
@@ -83,21 +81,6 @@ namespace MazeGenerator {
 
         public void SetValue (int val) {
             value = val;
-        }
-
-
-        public bool IsInPath () {
-            return inPath;
-        }
-
-
-        public void MakePath () {
-            inPath = true;
-        }
-
-
-        public void RemoveFromPath () {
-            inPath = false;
         }
     }
 }

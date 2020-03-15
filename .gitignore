@@ -30,6 +30,7 @@ autom4te.cache/
 tarballs/
 test-results/
 Thumbs.db
+*.png
 
 #Mac bundle stuff
 *.dmg

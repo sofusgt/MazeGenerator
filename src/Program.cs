@@ -1,7 +1,7 @@
 ﻿using System.Net.Mime;
 using System.Collections.Generic;
 using System;
-using System.Drawing.Imaging;
+using System.Drawing;
 
 namespace MazeGenerator
 {
@@ -9,10 +9,12 @@ namespace MazeGenerator
     {
         static void Main(string[] args)
         {
-            /* Maze maze = new Maze(10);
-            Console.WriteLine(maze);
+            int mazeSize = 100;
+
+            Maze maze = new Maze(mazeSize);
             maze.LoopErasedRandomWalk();
-            Console.WriteLine(maze); */
+
+            maze.GenerateImage();
         }
     }
 }
